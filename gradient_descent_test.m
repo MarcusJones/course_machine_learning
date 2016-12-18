@@ -1,14 +1,16 @@
 
 % Training data
-X = [1,2,3];
-Y = [1,2,3];
+X = [3 2 4 0];
+Y = [4 1 3 1];
 
 hold on
 plot(X,Y,'o')
 
 h_theta = inline('theta_1 * x', 'theta_1', 'x');
 
-theta_1 = 00;
+theta_1 = 0;
+
+
 
 Y_guess = h_theta(theta_1,X);
 
@@ -30,3 +32,14 @@ arrayfun(J_new(X,Y,theta_guess),theta_gess)
 
 
 
+A = [1,1,1;1,1,1;1,1,1]
+
+B = [6,12,6;66,9,8;6,7,8]
+
+A*B
+
+B*A
+
+A*B*A
+
+B*A*B
