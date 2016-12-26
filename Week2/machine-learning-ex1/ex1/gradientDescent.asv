@@ -12,7 +12,7 @@ for iter = 1:num_iters
     h_theta = (theta'*X')';
     
     theta_0 = theta(1) - alpha * 1/m * sum(h_theta-y);
-    theta_1 = theta(2) - alpha * 1/m * sum((h_theta-y).*X(:,2));
+    theta_1 = theta(2) - alpha * 1/m * sum((h_theta-y).*X);
     
     theta_new = [theta_0;theta_1];
     
